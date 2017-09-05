@@ -1,0 +1,46 @@
+@import "reset.scss";
+
+@font-face {
+  font-family: 'iconfont';  /* project id 338840 */
+  src: url('//at.alicdn.com/t/font_616rr5590saqyqfr.eot');
+  src: url('//at.alicdn.com/t/font_616rr5590saqyqfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_616rr5590saqyqfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_616rr5590saqyqfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_616rr5590saqyqfr.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family: iconfont;
+    font-weight: normal;
+}
+
+
+@mixin flexBox{
+    display: -webkit-box;
+//  display: -ms-flexbox;
+    display: flex;
+}
+@mixin flex($num:1){
+     -webkit-box-flex: $num;
+    flex: $num;
+}
+@mixin flex-direction($dir:row){
+    @if $dir == row {
+        -webkit-box-orient: horizontal;
+        flex-direction: row;
+    }
+    @else {
+         -webkit-box-orient: vertical;
+          flex-direction: column;
+    }
+}
+
+//水平垂直居中
+@mixin flex-center{
+    @include flexBox;
+    @include flex-direction("column");
+    
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}

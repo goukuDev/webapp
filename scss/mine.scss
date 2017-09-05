@@ -1,0 +1,127 @@
+@import 'main.scss';
+#container{
+    width:100%;
+    height:100%;
+    @include flexBox;
+    @include flex-direction(column);
+    #mineHeader{
+        width:100%;
+        height:37px;
+        border-bottom:1px solid #EEEEEE;
+        position: relative;
+        line-height:37px;
+        text-align: center;
+        @include flexBox;
+        @include flex-direction(row);
+        color: #5E5E5E;
+        background: #FAFAFA;
+        .left{
+            width:40px;
+            height:100%;
+            font-size:12px;
+        }
+        .rt{
+            width:60px;
+            height:100%;
+            font-size:14px;
+            font-weight:normal;
+        }
+        .box{
+            flex: 1;
+            line-height:37px;
+            border-radius:5px;
+            text-align: center;
+            font-size:15px;
+            font-weight: bold;
+        }
+    }
+    #mineContent{
+        flex:1;
+        width:100%;
+        height:100%;
+        background:white;
+        overflow: hidden;
+        .minebox{
+            width:100%;
+            height:80%;
+            margin-top: 15%;
+            overflow: hidden;
+            text-align: center;
+            .zh{
+                height:16px;
+                font-size:12px;
+                color:#666;
+                margin-top:12px;
+            }
+            .int1,.int2{
+                height:30px;
+                width:90%;
+                border: none;
+                border-bottom:1px solid #ededed;
+                font-size:20px;
+                color:black;
+                text-align: center;
+                margin-top: 15px;
+                outline: none;
+                placeholder:#ccc;
+                letter-spacing:3px;
+            }
+            input::-webkit-input-placeholder{color:#F3F1EE;}
+            .dl{
+                width:90%;
+                height:40px;
+                margin: 0 auto;
+                background: #FF1877;
+                border-radius:3px;
+                color: white;
+                font-size:15px;
+                line-height:40px;
+                text-align: center;
+                margin-top:20px;
+            }
+            .dlp{
+                width:90%;
+                margin: 0 auto;
+                text-align: center;
+                font-size:12px;
+                margin-top:10px;
+                a:nth-of-type(1){
+                    float: left;
+                    color:#999;
+                }
+                a:nth-of-type(2){
+                    float: right;
+                    color:#f66;
+                    text-decoration: none;
+                }
+            }
+            .qq{
+                width:90%;
+                height:90px;
+                margin: 0 auto;
+                margin-top:100px;
+                border-radius:45px;
+                a{
+                    display: block;
+                    width:90px;
+                    height:90px;
+                    margin:0 auto;
+                    background: url('https://s10.mogucdn.com/p1/150803/upload_ieztmnzwmztdsoddgizdambqgyyde_210x210.png');
+                    background-size: 100%;
+                }
+            }
+        }
+        .block{
+            width:150px;
+            height:30px;
+            font-size:13px;
+            color: white;
+            text-align: center;
+            background:#666;
+            border-radius:5px;
+            margin: 0 auto;
+            line-height: 30px;
+            display: none;
+        }
+    }
+}

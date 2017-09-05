@@ -1,0 +1,119 @@
+@import 'main.scss';
+#container{
+    width:100%;
+    height:100%;
+    @include flexBox;
+    @include flex-direction(column);
+    #searchHeader{
+        width:100%;
+        height:37px;
+        border-bottom:1px solid #EEEEEE;
+        position: relative;
+        line-height:37px;
+        text-align: center;
+        @include flexBox;
+        @include flex-direction(row);
+        color:#ccc;
+        .left{
+            width:40px;
+            height:100%;
+        }
+        .rt{
+            width:40px;
+            height:100%;
+            font-size:12px;
+            font-weight:normal;
+            color:#666;
+        }
+        .box{
+            flex: 1;
+            width: 226px;
+            height:20px;
+            margin-top:8px;
+            @include flexBox;
+            @include flex-direction(row);
+            line-height:20px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            font-size:12px;
+            font-weight: normal;
+            .find{
+                width: 100%;
+                height:19px;
+                display: block;
+                border: none;
+                outline: none;
+                box-sizing: border-box;
+                margin-left:8px;
+            }
+        }
+    }
+    #searchContent{
+        flex:1;
+        .history{
+            width:100%;
+            height:80px;
+            border-bottom: 1px solid #F4F4F4;
+            .stop{
+                width:100%;
+                height:20px;
+                font-size:12px;
+                margin-top:10px;
+                color:#999;
+                position: relative;
+                .slt{
+                    margin-left:8px;
+                    margin-right:3px;
+                }
+                .srt{
+                    position:absolute;
+                    right:10px;
+                    font-size:15px;
+                }
+            }
+            .scont{
+                    width:100%;
+                    height:60px;
+                    .sh{
+                        height:20px;
+                        margin-left:8px;
+                        font-size:13px;
+                        color:#999;
+                    }
+                    .hs{
+                        margin-left:8px;
+                        font-size:13px;
+                        color:#333;
+                    }
+            }
+        }
+        .hot{
+            width:100%;
+            .top{
+                width:100%;
+                height:20px;
+                font-size:12px;
+                margin:10px 0;
+                color:#999;
+                padding-left: 10px;
+                box-sizing: border-box;
+            }
+            .cont{
+                width:90%;
+                margin:0 auto;
+                a{
+                    height:16px;
+                    padding:2px;
+                    display: inline-block;
+                    line-height:16px;
+                    text-align: center;
+                    border:1px solid #ccc;
+                    margin:5px 3px;
+                    font-size: 13px;
+                    color:#666;
+                    border-radius:5px;
+                }
+            }
+        }
+    }
+}
